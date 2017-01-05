@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Week1Ex4</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        background: #D9D9D9;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+    <div class="row">
+    <div class="col-xs-12 ">
+        <h1>Week1ex4 - bootcamp eduweb</h1>
+
+        <form>
+          <input type="text" name="imie" id="firstinput" placeholder="Wpisz tutaj swoje imie" /> 
+          <input type="button" id="dodaj" value="Dodaj imię" />
+        </form>
+
+        <ul class="names">
+          
+
+        </ul>
+    </div>
+    </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+   
+      (function () {
+
+
+                  $("#dodaj").on("click",function(){
+                  var pole = $('#firstinput').val();
+
+                    if(pole.length === 0)
+                      {
+                    alert("Nie podałeś żadnego imienia");
+                        
+                        
+                          }
+
+
+                  else{
+                    $("ul.names").append("<li>" +pole+ "</li>");
+                    $("#pole").removeAttr("style");
+                }
+                  });
+
+        })();
+
+    </script>
+  </body>
+</html>
